@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>brightmindsmentoring2026</title>
+  <style>
+    header {
+	position: relative; /* allow overlay positioning */
+      background-image: url("header-bg.jpg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      height: 300px;            
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* space between title and nav */
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+/* Overlay effect */
+header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* dark transparent layer */
+  z-index: 0; /* behind text */
+}
+
+/* Ensure text stays above overlay */
+header .title, header .nav {
+  position: relative;
+  z-index: 1;
+}
+
+    /* Title block centered */
+    .title {
+      flex-grow: 1;               /* take available space */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;    /* center vertically */
+      align-items: center;        /* center horizontally */
+    }
+
+    .main-title {
+      font-size: 60px;
+      font-family: "Georgia", serif;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      font-family: "Arial", sans-serif;
+      font-style: italic;
+    }
+
+    /* Navigation labels at bottom */
+    .nav {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 10px;
+    }
+
+    .nav button {
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 8px 12px;
+    }
+
+    .nav button:hover {
+      color: lightgray;
+    }
+
+    .nav button.selected {
+      font-weight: bold;
+      background-color: #333; /* dark grey highlight */
+      border-radius: 4px;
+    }
+
+    /* Content sections */
+    .section {
+      display: none;
+      padding: 15px;
+      background-color: #f1f1f1;
+      margin: 10px;
+      border-radius: 5px;
+    }
+.section-content {
+  display: flex;              /* side-by-side layout */
+  align-items: flex-start;    /* align image and text at the top */
+  gap: 20px;                  /* space between image and text */
+}
+
+.section-image {
+  width: 250px;               /* adjust size */
+  height: auto;
+  border-radius: 8px;         /* optional rounded corners */
+}
+
+.section-text {
+  flex: 1;                    /* text takes remaining space */
+}
+.graduation-list {
+  list-style-type: none;   /* remove default bullets */
+  padding-left: 0;         /* remove extra indentation */
+}
+
+.graduation-list li {
+  margin-bottom: 8px;      /* spacing between items */
+}
+.team-divider {
+  border: none;
+  border-top: 2px solid #ccc; /* light grey line */
+  margin: 30px 0;             /* spacing above and below */
+}
+.indented-list {
+  list-style-position: inside;   /* keeps bullets inside the text block */
+  padding-left: 40px;            /* increase indentation */
+}
+
+.indented-list li {
+  margin-bottom: 8px;            /* spacing between items */
+  text-indent: -10px;            /* optional: adjust text alignment */
+}
+.section p.test-prep-heading {
+  margin-top: 40px;   /* adds space above */
+  font-size: 18px;    /* optional: make it stand out */
+  font-weight: none;  /* optional: emphasize heading */
+}
+.contact-info .icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="title">
+      <div class="main-title">ACADEMIC SUBJECT ASSISTANCE</div>
+      <div class="subtitle">( AP/IB/IGCSE EXAMS AND MORE )</div>
+    </div>
+    <div class="nav">
+      <button data-target="about" class="selected">About Us</button>
+      <button data-target="team">Our Team</button>
+      <button data-target="services">Our Services</button>
+      <button data-target="admissions">Admissions</button>
+      <button data-target="contact">Contact</button>
+    </div>
+  </header>
+
+  <!-- Sections -->
+  <div id="about" class="section" style="display:block;">
+    <p>Our team is experienced, well-educated, and passionate about making learning a transformative experience.  We excel in the following areas:</p>
+	<ul>
+    		<li><strong>We Understand the Admissions Process:</strong> Many of our team members have studied at world’s most elite universities.  As such, we are well aware of the rigor and effort needed to craft stand-out applications.  This, of course, ought to be complemented with a track record of accomplishment. We help students highlight their achievements and express them to admissions committees in convincing and compelling ways.  This is the case not only for colleges, but also boarding schools and select graduate programs.</li>
+    		<li><strong>We Are Selective About Students:</strong> Just as students and parents are careful in selecting the right mentors to work with, we are thoughtful about selecting clients who we believe are a good fit for us.  As teaching and counseling is an intense and often sustained process, we believe it is important to have clients who share similar values.  Student motivation and parent engagement are crucial for success, as we believe that relationships as well as study habits are critical for success.  We do not overload our team with large numbers of students to supervise to ensure that each student gets ample attention.</li>
+    		<li><strong>We Strive to be Ethical:</strong> Our team works hard to ensure that students act in ethical and responsible ways.  We do not take exams for students, we do not write student essays, and we attempt to ensure that our students are upstanding citizens.</li>
+		<li><strong>We Value Our Scholarship and Advisement, Not Pure Businessmen:</strong> While every company seeks profits, the majority of our staff is invested its in academics and counseling activities.  Some of our team has published professionally in academic fields and education while others have explored putting together online courses for the wider public.  All of our team is engaged with the learning process and has attended numerous learning and educational training seminars.  We treat our mentors well because their work is professional in nature.</li>
+		<li><strong>We Are Culturally Aware:</strong> Our team has worked with students from a wide range of countries across Asia, Europe, and America.  We have worked with students of various political leanings, sexual orientations, and socioeconomic backgrounds.</li>
+		<li><strong>We Have a History of Success:</strong> Our founder and many of our expert team members have placed students into top universities consistently for the past decade.  With students regularly gaining admissions to top 50 American colleges – as well as some elite schools outside America – we are proud of our students and our record.</li>
+  	</ul>
+  </div>
+  <div id="team" class="section">
+    <div class="section-content">
+    <img src="Justin Picture.jpg" alt="Our Team" class="section-image">
+    <div class="section-text">
+      <p><strong>Justin Grosslight – Founder and Director</strong></p>
+      <ul class="graduation-list">
+  	<li>🎓 AM History of Science, Harvard University</li>
+  	<li>🎓 BS Mathematics, Stanford University</li>
+  	<li>🎓 BA History, Stanford University</li>
+</ul>
+	<p>Justin Grosslight believes that incisive mentorship is an ideal way to help students prepare for their studies.  Through a semi-holistic approach involving dialogue with students and parents, he aims to help students grow their interests, improve their college entrance exam scores, and fashion their essays in ways that can attract college admissions officers.  He also relishes teaching mathematics and dedicates a fair amount of time to quantitative pedagogy.</p>
+<p>Justin has over a decade of experience in training students for their SAT, ACT, SSAT, GMAT, GRE, AP Calculus, and IB mathematics, exams.  Several of his students have received near perfect or perfect scores on portions of their standardized tests.  Students he has advised as a college counselor have received admissions to prestigious universities such as Stanford, Vanderbilt, Emory, NYU, UCLA, Duke University, The University of Virginia, UC Davis, The University of Michigan, Boston College, Tufts University, and Case Western University.  Of course, Justin is candid about expectations and outcomes from the outset with clients.</p>
+<p>Prior to founding JJMG Enterprises, Justin served as Director and Partner for i-IVY and Manda Education.  He has also has assisted numerous Vietnamese and American-based education consultancies and worked independently.  While pursuing graduate study in history of science at Harvard, he won a Derek Bok Award for Teaching Excellence.  Justin also holds undergraduate degrees from Stanford in mathematics and history.  He has appeared in the Vietnamese press (Tuổi Trẻ) twice to discuss American education.</p>
+<p>Finally, Justin has is a prolific author.  He has published academic articles in history of science and mathematics as well as numerous book reviews in history, sociology, history of science, international politics, nonfiction literature, and education.  Moreover, he has authored several pedagogical books, all of which are sold on Amazon and some by Nha Sach Phu Nu in Vietnam.</p>
+    </div>
+  </div>
+<hr class="team-divider">
+
+  <!-- Person 2 -->
+  <div class="section-content">
+    <img src="Sonya-Petkova.png" alt="Team Member" class="section-image">
+    <div class="section-text">
+      <p><strong>Sonya Petkova – Director and Partner</strong></p>
+      <ul class="graduation-list">
+        <li>🎓 M.Phil Comparative Literature, Columbia University</li>
+        <li>🎓 MA Comparative Literature, Columbia University</li>
+	<li>🎓 BA English, Stanford University</li>
+      </ul>
+      <p>Having mastered the art of literary analysis and verbal test prep, Sonya has developed a winning methodology to help students increase their verbal scores.  Working with Educational Masters, a Russian education company based in Miami, Florida, and then independently, Sonya consistently has students score in the top percentiles on the SAT and TOEFL exams.  She also is in the process of translating these skills into online courses to allow greater numbers of individuals and those in more remote areas to benefit from her wisdom.  Alongside student training, Sonya has successfully coached professional academic writers to clarify their research writing as well.</p>
+<p>In terms of college counseling, Sonya pays special attention to the psychological aspects of the application process. It is no secret that students – especially in the year leading to college applications – are excessively busy and exposed to pressures to succeed. As a consultant, Sonya excels at helping students manage their anxiety while guiding them through the intricate admissions process.</p>
+<p>Originally from Bulgaria, Sonya herself has experienced the dream of applying to elite American schools and gaining acceptance to them.  She holds undergraduate degrees from Stanford University in English and Political Science, and graduate degrees from Columbia in Comparative Literature.  Sonya’s students have been successfully admitted into top US and UK universities such as Cornell, University Columbia University, University of Pennsylvania, Brown, Duke, NYU, UCLA, UC Berkeley, Georgia Tech, Cambridge University, University of Michigan, USC, Boston University, UC San Diego, and Amherst.</p>
+    </div>
+  </div>
+</div>
+  </div>
+  <div id="services" class="section">
+    <p>LONG TERM PACKAGES​</p>
+    <p><strong>College Preparation and Application Packages:</strong></p>
+    <p>We aim to enroll students from grade 11 or the early fall term grade 12 to help them best prepare themselves for the college admissions process.  Our guidance is holistic and aimed to bring out the best qualities in each individual student.</p>
+	<p>Such packages include training in the following:</p>
+	<ul class="indented-list">
+  <li>Assistance with preparation for college entrance exams (SAT/ACT) – we have even published some of our own books!</li>
+  <li>Assistance in compiling a broad yet focused list of schools for student applications</li>
+  <li>Assistance with strategies and positioning in the college admissions process</li>
+  <li>Help with brainstorming college admissions essay topics</li>
+  <li>Intensive editing and guidance on writing college essays</li>
+  <li>Preparation for colleges who interview applicants</li>
+  <li>Assistance with waitlist guidance if waitlist</li>
+  <li>If applicable, assistance with English training for college admissions (TOEFL/IELTS/Duolingo)</li>
+  <li>Occasional academic support in high school</li>
+</ul>
+
+<p class="test-prep-heading">Test Preparation Assistance (English and Entrance Exams)</p>
+    <p><strong>College Entrance Exams (SAT/ACT)</strong></p>
+    <p>We provides focused one-on-one tutoring to help students succeed on their SAT or ACT exams for college.  Our members have years of experience helping students improve their scores, and many have Ivy League or equivalent educations.  We also have published our own vocabulary books which may help in your preparation.</p>
+<p><strong>SSAT Exam:</strong></p>
+    <p>If you’re looking to attend boarding school, we provide guidance on the SSAT (upper) exam, and have even written some of our own books on this material.  Our team has helped many students improve their SSAT score, which has helped them gain admissions to exceptional boarding schools.</p>
+<p><strong>GMAT Exam for Business School:</strong></p>
+    <p>If the one roadblock to attending your dream business school is your GMAT score, we can gladly help you improve.  Our teachers have successfully helped many students raise their GMAT scores which, in turn, have helped open doors to stellar business school programs.</p>
+<p><strong>GRE Exam:</strong></p>
+    <p>If your goal is a master’s program, PhD program, or certain business schools who require a GRE exam, we are here to train you.  Our mentors have received top-notch GRE scores and can help you improve your verbal and quantitative scores.</p>
+<p><strong>GRE Exam:</strong></p>
+    <p>If your goal is a master’s program, PhD program, or certain business schools who require a GRE exam, we are here to train you.  Our mentors have received top-notch GRE scores and can help you improve your verbal and quantitative scores.</p>
+<p><strong>TOEFL/IELTS/Duolingo:</strong></p>
+    <p>We ready to help connect you with first-class English tutoring to help you achieve the scores you need.  Our English teachers and affiliates are passionate about language development and have track records of proven results.</p>
+  </div>
+  <div id="admissions" class="section">
+    <p class="test-prep-heading">The College Admissions Process:</p>
+	<p>College admissions in America is a holistic process that seeks to evaluate the academic, extracurricular, and personal qualities of each applicant.  While the application itself typically is submitted in the beginning of an applicant’s senior year, assessment of applicants begins as early as grade 9.  Below is a chart (in English) of the principal areas assessed in applicants to an American University.</p>
+    <p>We aim to enroll students from grade 11 or the early fall term grade 12 to help them best prepare themselves for the college admissions process.  Our guidance is holistic and aimed to bring out the best qualities in each individual student.</p>
+	<p>The principal areas of assessment are as follows:</p>
+<ul class="indented-list">
+  <li>High School Grades (Transcripts, grades 9-12)</li>
+  <li>Standardized Test Scores (SAT/ACT/AP/IB/TOEFL)</li>
+  <li>College Application Essays and Activities</li>
+  <li>Alumnus/a Interviews</li>
+  <li>Teacher and Counselor Recommendations</li>
+  <li>Portfolio (optional, unless applying for arts school)</li>
+</ul>
+
+<p class="test-prep-heading">The Boarding School Admissions Process:</p>
+<p>Boarding school admissions in America evaluates candidates in a </p>
+<ul class="indented-list">
+  <li>School Grades (Transcripts)</li>
+  <li>Standardized Exam Scores (typically SSAT)</li>
+  <li>English Proficiency (TOEFL)</li>
+  <li>School Counselor Recommendation</li>
+  <li>English and Math Teacher Recommendations</li>
+  <li>Personal Essays</li>
+<li>Parent Statement</li>
+<li>School Interview</li>
+<li>Personal or Special Interest Reference (optional)</li>
+</ul>
+
+  </div>
+  <div id="contact" class="section">
+    <div class="contact-info">
+  <p><img src="address-icon.png" alt="Address" class="icon"> Lapu-Lapu City, Cebu, Philippines 6015</p>
+  <p><img src="telephone-icon.png" alt="Phone" class="icon"> (032) 242-0319</p>
+  <p><img src="phone-icon.png" alt="Mobile" class="icon"> (+63) 9204759284</p>
+  <p><img src="email-icon.png" alt="Email" class="icon"> juanjrenghug@gmail.com</a></p>
+</div>
+  </div>
+
+  <script>
+    // Highlight chosen label and show section
+    const buttons = document.querySelectorAll(".nav button");
+    const sections = document.querySelectorAll(".section");
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        sections.forEach(sec => sec.style.display = "none");
+        buttons.forEach(b => b.classList.remove("selected"));
+        btn.classList.add("selected");
+        const target = document.getElementById(btn.dataset.target);
+        target.style.display = "block";
+      });
+    });
+  </script>
+</body>
+</html>
